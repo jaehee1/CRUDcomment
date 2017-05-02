@@ -1,1 +1,1 @@
-![댓글 메소드에러](error.jpg)
+![댓글 메소드에러](./assets/images/error.JPG)

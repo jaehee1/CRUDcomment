@@ -3,6 +3,7 @@
     제목 : <%= @post.title %><br>
     내용 : <%= @post.content %><br>
     시간 : <%= @post.created_at %><br>
+    <hr>
     <% @post.comments.each do |c| %>
         <%= c.id %> : <%= c.content %>
         <br>
@@ -13,7 +14,6 @@
         <input type="text" name="comment_id" placeholder="댓글 내용">
         <button type="submit">댓글 달기</button>
     </form>
-    
 </p>
 <br>
 <a href="/home/update/<%=@post.id%>">수정하기</a><br>

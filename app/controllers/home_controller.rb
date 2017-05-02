@@ -34,17 +34,17 @@ class HomeController < ApplicationController
   end
   
   def comment
-    @comment = Comment.new
-    @comment.content = params[:comment_id]
-    @comment.post_id = params[:comment_hidden]
-    @comment.save
+    comment = Comment.new
+    comment.content = params[:comment_id]
+    comment.post_id = params[:comment_hidden]
+    comment.save
     
-    redirect_to "/home/read/#{@comment.post.id}"
+    redirect_to "/home/read/#{comment.post.id}"
   end
   
   def comment_delete
     comment = Comment.find(params[:comment_id])
     comment.destroy
-    redirect_to "/home/read/#{@comment.post.id}"
+    redirect_to "/home/read/#{comment.post.id}"
   end
 end
