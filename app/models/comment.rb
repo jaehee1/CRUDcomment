@@ -1,5 +1,5 @@
 class Comment < ActiveRecord::Base
     belongs_to :post
-    validates :content, absence: true
-    # 댓글 내용이 빈칸이면 안됨
+    validates :content, presence: {message: "빈칸은 안되요"}
+    # 댓글 내용이 빈칸이면 안됨    true
 end
