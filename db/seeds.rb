@@ -10,6 +10,4 @@ for i in 1..5
     for j in 1..5
         comments = Comment.create(content: Faker::Lorem.sentence, post_id: posts.id)
     end
-    users = User.create(name: Faker::Name.name, mail: Faker::Internet.email)
-    groups = Group.create(name: Faker::Pokemon.name)
 end
