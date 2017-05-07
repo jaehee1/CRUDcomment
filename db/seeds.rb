@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+for i in 1..5
+    posts = Post.create(title: Faker::Name.name, content: Faker::Lorem.sentence)
+    for j in 1..5
+        comments = Comment.create(content: Faker::Lorem.sentence, post_id: posts.id)
+    end
+    users = User.create(name: Faker::Name.name, mail: Faker::Internet.email)
+    groups = Group.create(name: Faker::Pokemon.name)
+end
