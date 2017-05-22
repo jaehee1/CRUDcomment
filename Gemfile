@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'devise'
 gem 'pry'
 gem 'rails_db'
 gem "font-awesome-rails"

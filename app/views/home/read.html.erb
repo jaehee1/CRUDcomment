@@ -5,7 +5,7 @@
     시간 : <%= @post.created_at %><br>
     <hr>
     <% @post.comments.each do |c| %>
-        <%= c.id %> : <%= c.content %>
+        <%= c.user.email %> : <%= c.content %>
         <br>
     <a href="/home/comment_delete/<%=c.id%>">댓글 삭제</a><br>
     <% end %>
