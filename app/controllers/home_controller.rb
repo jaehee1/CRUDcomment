@@ -11,6 +11,8 @@ class HomeController < ApplicationController
     @post = Post.new
     @post.title = params[:satang]
     @post.content = params[:kimbab]
+    CruduploaderUploader.new.store!(params[:pic])
+    flash[:notice] = "전송되었습니다!"
     @post.user = current_user
     if @post.save
       redirect_to "/home/index"
@@ -61,4 +63,5 @@ class HomeController < ApplicationController
     comment.destroy
     redirect_to "/home/read/#{comment.post.id}"
   end
+ 
 end
