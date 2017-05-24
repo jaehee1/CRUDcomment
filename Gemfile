@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'fog-aws'
+gem 'carrierwave'
 gem 'devise'
 gem 'pry'
 gem 'rails_db'
