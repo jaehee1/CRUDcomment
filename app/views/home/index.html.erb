@@ -1,5 +1,5 @@
 <div class ="container">
-  현재 유저 : <%= current_user.email %><hr>
+  로그인 유저 : <%= current_user.email %><hr>
     <% @posts.each do |o| %>
         <p>글쓴이 : <%= o.user.email %></p>
         <p><a href="/home/read/<%=o.id%>">제목 : <%=o.title%></a></p>
