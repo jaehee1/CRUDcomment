@@ -5,7 +5,7 @@ gem 'carrierwave'
 gem 'devise'
 gem 'pry'
 gem 'rails_db'
-gem "font-awesome-rails"
+gem 'font-awesome-rails'
 gem 'faker'
 gem 'awesome_print'
 gem 'will_paginate'
